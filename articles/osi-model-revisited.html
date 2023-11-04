@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" style="transform: none;"><head>
+    <title>The OSI Model Revisited</title>		
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />    
+	<meta name="author" content="Nathan Handy" />    
+	<meta name="description" content="Nathan Handy is blogging about software engineering, solution architecture, and web development.">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@_H4NDY">
+	<meta name="twitter:creator" content="@_H4NDY">
+	<meta name="twitter:title" content="Nathan Handy's Blog - The OSI Model Revisited">
+	<meta name="twitter:description" content="Nathan Handy is blogging about software engineering, solution architecture, and web development.">
+	<meta name="twitter:image" content="https://www.nathanhandy.blog/images/blog/articles-post1-osi-model-revisited.jpg">    
+	<meta property="og:title" content="Nathan Handy's Blog - The OSI Model Revisited">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://www.nathanhandy.blog/articles.html">	
+	<meta property="og:description" content="Nathan Handy is blogging about software engineering, solution architecture, and web development.">
+	<meta property="og:image" content="https://www.nathanhandy.blog/images/blog/articles-post1-osi-model-revisited.jpg">
+	
+    <!-- Stylesheets & Fonts -->
+    <link href="../css/plugins.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+<style id="theia-sticky-sidebar-stylesheet-TSS">.theiaStickySidebar:after {content: ""; display: table; clear: both;}</style>
+<style>
+.wrapper{
+  margin: 0;
+  padding: 0;
+  width: 100%;  
+  height: 40vh;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  background: #fff;
+  overflow: hidden;
+}
+
+.box{
+  position: relative;
+  width: 540px;
+  height: 540px;
+  margin-top: -50px;
+  margin-left: 40px;
+  background: rgb(0 0 0 / 6%);
+  transform: rotate(-30deg) skew(25deg) scale(0.8);
+}
+.layer{
+  background: url('../images/blog/OSI Header.png') no-repeat;
+  background-size: cover;
+  position: absolute;
+  top:0;
+  left:0;
+  display: block;
+  width:100%;
+  height: 100%;
+  transition: 0.5s;
+}
+/*was .box:hover .layer:nth-child(5)*/
+.box .layer:nth-child(4){
+  transform: translate(160px, -160px);
+  opacity: 1.0;
+}
+.box .layer:nth-child(3){
+  transform: translate(120px, -120px);
+  opacity: 0.8;
+}
+.box .layer:nth-child(2){
+  transform: translate(80px, -80px);
+  opacity: 0.6;
+}
+.box .layer:nth-child(1){
+  transform: translate(40px, -40px);
+  opacity: 0.4;
+}		
+</style>
+</head>
+<body class="b--desktop breakpoint-lg" style="transform: none;">
+    <!-- Body Inner -->
+    <div class="body-inner" style="transform: none;">
+        <!-- Header -->
+        <header id="header" data-fullwidth="true" class="">
+            <div class="header-inner">
+                <div class="container">
+                    <!--Logo-->
+                    <div id="logo">
+                        <a href="/">
+                            <span class="logo-default">NH</span>
+                            <span class="logo-dark">NH</span>
+                        </a>
+                    </div>
+                    <!--End: Logo-->
+                    <!--Navigation Resposnive Trigger-->
+                    <div id="mainMenu-trigger">
+                        <a class="lines-button x"><span class="lines"></span></a>
+                    </div>
+                    <!--end: Navigation Resposnive Trigger-->
+                    <!--Navigation-->
+                    <div id="mainMenu">
+                        <div class="container">
+                            <nav>
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+									<li><a href="/articles">Articles</a></li>
+									<li><a href="/about">About</a></li>                                               
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--end: Navigation-->
+                </div>
+            </div>
+        </header>
+        <!-- end: Header -->
+        
+        
+        
+        <!-- Page Content -->
+        <section id="page-content" style="transform: none;">
+            <div class="container" style="transform: none;">
+                <div class="row" style="transform: none;">
+                    <!-- content -->
+                    <div class="content col-lg-9">
+                        <!-- Blog -->
+                        <div id="blog" class="single-post">
+                            <!-- Post single item-->
+                            <div class="post-item">
+                                <div class="post-item-wrap">
+
+									<!-- 3D Layered Image Start -->
+									<div class="wrapper">
+									  <div class="box">
+										<div class="layer"></div>
+										<div class="layer"></div>
+										<div class="layer"></div>
+										<div class="layer"></div>
+									  </div>
+									</div>
+									<!-- 3D Layered Image Finish -->
+                                    <div class="post-item-description">
+                                        <h2 id="Overview">The OSI Model Revisited</h2>
+                                        <div class="post-meta">
+                                            <span class="post-meta-date"><i class="fa fa-calendar"></i>October 21, 2023</span>
+											<span class="post-meta-category"><i class="fa fa-tag"></i>OSI Model, HTTP</span>
+											<span class="post-meta-date"><i class="fa fa-clock"></i>20 Minute Read</span>
+                                            <div class="post-meta-share">
+                                                <a class="btn btn-xs btn-slide btn-twitter" href="https://twitter.com/" target="_blank" data-width="100">
+                                                    <i class="fab fa-twitter"></i>
+                                                    <span>Twitter</span>
+                                                </a>
+                                                <a class="btn btn-xs btn-slide btn-googleplus" href="mailto:#" data-width="80">
+                                                    <i class="icon-mail"></i>
+                                                    <span>Mail</span>
+                                                </a>
+                                            </div>
+                                        </div>
+										<h3>About this article</h3>
+                                        <p>In this article I discuss the OSI model, and how as a <em>conceptual model for interconnectivity</em> it is <!--<a href="#HowIs">-->relevant to various technology disciplines<!--</a>-->. I also discuss the shortcomings of existing reference materials, and I provide a more practical reference point for the engineering, configuration, and troubleshooting of system interconnectivity. </p>
+										<p>Having a background in engineering web applications, the article and associated diagrams focus on HTTP communication, and how it relates to the OSI model layers. HTTP is a ubiquitous technology, so it's the perfect candidate to illustrate the model in a more practical fashion.</p>
+										<p>Due to the depth of this subject, it's difficult to cover within any single article. This article focuses on how the model and <a href="#Diagrams">linked diagrams</a> can be an asset for technology professionals, with the diagrams assessing the model layers from a logical and physical perspective. Within the diagrams I have deliberately pushed the limits of content inclusion, in order to delineate key aspects.</p>
+										<p id="WhatIs">Given the broad scope of the OSI model, this article is relevant to students, software engineers, network engineers, system admins, operations and support staff, change managers, incident managers, and anyone interested in how system interconnectivity is generally achieved.</p>
+										
+										<h3>What is the OSI model?</h3>
+                                        <p>OSI stands for <em>Open Systems Interconnection</em>, with development of the OSI model starting in 1977. The model was designed to address the problem of incompatible proprietary network architectures, that had evolved in the 1960's and 70's. The model describes the layers of a computing system that, as a whole, enable software applications to communicate across separate host systems. Whether this be two PCs on a local network, a smart phone and API over the internet, software as a service (SaaS), or any number of interconnected applications.</p>
+										<p>The International Organization for Standardization (ISO) developed the <em>conceptual OSI model</em>, as well as a set of <em>accompanying protocols</em> intended to guide implementations. Due to the complexity of these protocols, many failed to be adopted over simpler alternatives. Due to this, the model is considered as irrelevant in some circles.</p>
+										<p>The <em>conceptual model</em> however, is still relevant to this day. It partitions the concerns of systems interconnectivity into 7 distinct layers, describing the unique responsibilities that each layer must implement. Even though clear layer boundaries may not be adhered to within certain implementations, the <em>concerns of each layer</em> are appropriately addressed within modern computer systems. In place of the formal OSI protocols that failed to gain traction, are other standards and protocols such as HTTP, DNS, TCP, and IP, providing the primary link between the conceptual model and logical solutions.</p>
+										<p>The 7 layers of the OSI model are listed below. The upper layers are typically the focus of application engineers and software development frameworks, with all lower level functions typically provided by operating system components, network device drivers, and network adapters.</p>
+										<!-- <div class="blockquote"> -->
+										<!-- <p> -->
+										<!-- 7. Application<br /> -->
+										<!-- 6. Presentation<br /> -->
+										<!-- 5. Session<br /> -->
+										<!-- 4. Transport<br /> -->
+										<!-- 3. Network<br /> -->
+										<!-- 2. Data Link<br /> -->
+										<!-- 1. Physical</p>			 -->
+                                        <!-- </div>											 -->
+										<div class="blockquote">
+										<small>
+										<ol reversed>
+											<li>Application</li>
+											<li>Presentation</li>
+											<li>Session</li>
+											<li>Transport</li>
+											<li>Network</li>
+											<li>Data Link</li>
+											<li>Physical</li>
+										</ol>
+										</small>
+										<small>- OSI Model Layers</small>
+										</div>											
+										
+										
+										<p>In addition to the OSI model, the alternate TCP/IP model presents a more simplified representation of system layers. The TCP/IP model is generally preferred by network engineers and other professionals focused on the network and transport layers. This alternate model groups the top 3 OSI layers together, as well as the bottom 2 layers. Unfortunately this somewhat disregards the concerns of engineers focussed on these layers.</p>										
+										<p>The OSI model presents each layer as being a sequential stage for interconnectivity, masking the concerns of adjacent layers. In practice this is not always the case, and communication between the layers is not always linear (particularly with regards to presentation and transport). This is not something usually discussed within articles describing the OSI model, and caveats such as this, along with other ambiguous descriptions, often result in more questions than answers. </p>
+										<p id="HowIs">The failure of traditional resources to relate the OSI model to logical and physical implementations, has resulted in the model being an underutilized reference point within several technology disciplines.</p>
+										
+										<h3>How is the OSI model still relevant?</h3>
+                                        <p>The conceptual foundations defined by the OSI model, continue to underpin the internet and modern applications. Even so, traditional resources only serve as an introduction for students, or as a general guide when discussing communication protocols and technologies.</p>
+										<p>Outside the scope of these typical contexts, the OSI model has failed to reach its full potential as a construct for clarifying systems interconnectivity. The reasons for this are discussed further below, but first let's consider the model's continued relevance to various technology professionals:</p>
+										<ul>
+											<li><strong>Application Engineers</strong>: The top 2 model layers have the most relevance for application engineers. That said, a basic understanding of the concepts and technologies at the middle layers is beneficial, when seeking the root cause of connection issues.</li>
+											<li><strong>Network Engineers</strong>:  For network engineers the middle 3 layers are the most relevant. The protocols and standards at these layers are essential for engineers configuring routers, firewalls, load balancers, and proxy servers in a corporate setting. Some knowledge of the upper layers is also essential.</li>
+											<li><strong>Operations Staff & System Admins</strong>: Knowledge of the concepts and technologies at the upper and middle OSI layers, may lead to valuable insights for operations staff and system admins, supporting applications or network services.</li>
+											<li><strong>Change Managers & Incident Managers</strong>:  An overview of the model and its relationship to certain technologies, may help drive discussions and actions with application and network engineers. Particularly when overseeing connectivity changes or incidents within complex application ecosystems and networks.</li>
+											<li><strong>Security  Engineers & Penetration Testers</strong>: A broad understanding of the model and the products targeting the middle and upper layers, can enable security professionals to map and further classify CVE vulnerabilities and exploits associated with interconnectivity. </li>
+											<li><strong>Enterprise Architects</strong>: Mapping various tools and products to OSI layers, can present a unified view of the interconnectivity solutions applied within/available to technology departments.</li>
+										</ul>
+										<p>These examples - from the viewpoint of technology teams in medium to large organizations - say nothing of the vendors and engineers concerned with developing operating systems, network management software, physical network devices, and device drivers. Further disciplines such as these are illustrated in the diagram below.</p>
+										<br />
+										<div class="post-image">
+										<a href="../images/blog/OSI Model in Practice v1.0 - Disciplines - Large.png" target="_blank"><img alt="" src="../images/blog/OSI Model in Practice v1.0 - Disciplines - Medium.png" style="width:100%;"></a></div>
+										<br />
+										<p>Given the relevance of the OSI model and the benefits discussed above, let's explore why it's an underutilized reference point for technology teams:</p>
+										<div class="blockquote">
+										<small>
+										<p>
+										<em>Why the OSI model is underutilized by technology teams:</em>
+										</p>
+										<ol>
+											<li><strong><small>The OSI model is a <em>conceptual model</em></strong>, which given its high level nature is difficult to relate to logical and physical implementations.</small></li>
+											<li id="WhyRevisit"><strong><small>The OSI model is a <em>vast subject</em></strong>, with each layer covering several protocols, standards, and technologies.</small></li>
+											<li><strong><small>There is a <em>lack of reference materials</em></strong> that connect the OSI model to <em>concrete examples</em>, to assist with engineering and supporting interconnected systems.</small></li>
+										</ol>
+										</small>
+										</div>
+										<h3>Why revisit the OSI model?</h3>
+                                        <p>The continued relevance of the OSI model and the lack of practical reference materials, present a fantastic opportunity to revisit the model. </p>
+										<p>Given the complexity of systems interconnectivity, no high level model will ever map perfectly to every possible implementation. This holds true for the OSI model. Even though the unique concerns outlined within each layer <em>are</em> catered for within modern systems, the logical implementations of these layers is not always clear cut. The dynamic library files and drivers provided by operating systems and third party vendors may blend code for multiple layers into a single file (as is the case with Windows TCP/IP drivers). Development frameworks used by application engineers may also combine logic for the presentation and application layers into a single module.</p>
+										<p>That is not to say that the OSI model layers are irrelevant, or that they can't be compared to actual system implementations. Just that it takes effort to relate the conceptual and logical aspects of system interconnectivity, and that certain caveats must be acknowledged. What good are conceptual models after all, if we can't relate them to logical implementations at some point? The same question can also be asked of physical implementations, and the types of devices or dedicated servers that target particular OSI model layers.</p>
+										<p>It's notable that for a model describing systems interconnectivity, there are very few illustrations relating the model to multi-system implementations. That said, this is a difficult endeavour, given the range of technologies and solutions available. The internet and corporate networks can be as complex as any logic running on a CPU, and illustrating the OSI model in these <em>physical contexts</em> requires focused examples, and careful consideration. </p>	
+										<p>In order to better cover this subject, and provide a clearer link between the OSI model and actual implementations, I've produced both a <a href="#Diagrams">Single System diagram</a>, and a <a href="#Diagrams">Multi System diagram</a>. Due to the breadth of this topic, the diagrams focus primarily on HTTP driven connectivity and communications, and the technologies that typically underpin these. Various responsibilities and protocols are discussed, as well as the general flow of data through the model's layers. The diagrams also illustrate the difficulty of relating the OSI model to logical solutions, with certain logical components crossing conceptual layer boundaries.</p>
+										<p id="Practical">These diagrams present an informal yet edifying way, of mapping logical and physical architectures to the OSI model. While it's difficult to fully align OSI layers with products and technologies, the goal here isn't a perfect classification, but rather a more enlightening viewpoint. Mapping the connectivity waypoints of systems in this fashion, can further aid the people engineering and supporting such systems.</p>		
+
+										<h3>In Practice</h3>
+                                        <p>As demonstrated within the attached diagrams, the OSI model can be used to visualize the technologies underpinning application ecosystems. It can also be used to shine a light on potential knowledge gaps, ownership gaps, and points of disconnect within technology departments. Such gaps aren't always obvious, and it often takes an incident to highlight this to product owners and stakeholders. </p>
+										<p>For example, there are often areas where application and network engineers have a misaligned understanding, such as appropriate monitoring and handling of grey failures. The intricacies of certain protocols and products might also evade both types of engineers, particularly if they've never encountered certain edge cases.</p>
+										<p>I've faced multiple challenges in this regard, during various projects and incdients:</p>
+										<ol>
+											<li>Reconciling <strong>HTTPS protocol and cipher versions</strong> employed by client operating systems, client applications, load balancers, server operating systems, development frameworks, and bespoke server applications.</li>
+											<li>Reverse engineering <strong>HTTP request rewrites</strong> within disparate layer 7 devices, only to find that further undocumented rewrites were occurring within proxy servers.</li>
+											<li>Discovering a load balancer vip <strong>closing TCP connections</strong> after each HTTP request, when those same TCP connections were used as a means to track sticky sessions (back end server persistence).</li>
+											<li>Basic <strong>TCP health checks</strong> indicating that a server was 'up', when HTTP health checks would have shown failures, <em>if had they been implemented</em>.</li>
+											<li>Troubleshooting <strong>intermittent proxy connectivity issues</strong> affecting bespoke applications, only to eventually discover a development framework bug was the root cause.</li>
+											<li>Assisting app teams troubleshooting intermittent connectivity issues, discovering that they had only arranged <strong>firewall rules</strong> for a <em>single node</em> tied to a Global Server Load Balancer (GSLB).</li>
+											<li>Determining <strong>how requests to the same IP address are automatically routed to a new physical location</strong>, when migrating to a new load balancer solution.</li>
+										</ol>										
+										<p>In many of these situations I've found conflicting assumptions, knowledge gaps, or ownership gaps, between software and network engineers. Adding to these challenges is usually a lack of designs and documentation (even a minimal level).</p>
+										<p>
+										 It is in these instances that I've found myself drawing system and network architectures by hand, tying together known technologies and settings, stack traces, error logs, network dependencies, software specifications, <em>and varying layers of the OSI model</em>. All of this in an attempt to see past the visible interfaces and integration points, and to lift the lid of underlying implementations. </p>
+										<!-- <p>Operating systems and development frameworks can do too good a job, abstracting away key connectivity concerns. The same frameworks, tools, and APIs that enable faster application engineering, conceal most OSI model layers. This is of course by design, in order to achieve higher level solutions that don't 'reinvent the wheel'. But as a result, several default decisions are made implicitly within lower level components and subsystems, hiding details that are crucial when connectivity issues occur.</p> -->
+										<p id="Diagrams">While it's clear that no single diagram can fully describe interconnectivity in a complex system or network setting, sometimes a more elaborate reference point is all that is required to trigger new avenues of thought. Had the Single and Multi System diagrams below been available to me in years gone by, some of the engineering challenges that I faced would have been much less arduous.</p>
+																				
+										<h3>The Diagrams</h3>		
+										<p>Please see the <strong><small>Single System HTTP Example</small></strong> and <strong><small>Multi System HTTP Example</small></strong> diagrams linked below.</p>
+										<div class="post-image">
+										<a href="../images/blog/OSI Model in Practice v1.0 - SingleSystem - Large.png" target="_blank"><img alt="" src="../images/blog/OSI Model in Practice v1.0 - SingleSystem - Small.png" style="width:150px;margin-right:30px;"></a>
+										<a href="../images/blog/OSI Model in Practice v1.0 - MultiSystem - Large.png" target="_blank"><img alt="" src="../images/blog/OSI Model in Practice v1.0 - MultiSystem - Small.png" style="width:300px"></a>
+										</div></br>																		
+                                        <p>Within these diagrams I've aimed for a practical overview of the OSI model, focussing on the HTTP protocol and its dependencies. There are however <strong><small>many protocols related to each OSI layer that are deliberately excluded</small></strong>.</p>
+										<p>The diagrams discuss the request, segment, and packet transfer units for HTTP, TCP and IP protocols, as well as the associated 'headers' for each. I've not illustrated or described the purpose of these <strong><small>headers</small></strong> and their relationship to the 'payload' of these protocol transfer units, but there are many online resources explaining these.</p>
+										<p>The Single System diagram focuses on the <strong><small>Windows subsystems</small></strong> utilised by a web browser for a HTTP request. Windows provides more than one API for connectivity purposes, and browser implementations can also vary per vendor. I've deliberately avoided reverse engineering any browsers for the sake of simplicity (and time).</p>
+										<p>Within the Single System diagram I've made a somewhat contentious decision, to include components such as <strong><small>Winsock within the transport layer.</small></strong> Some purists may argue that 'sockets' and Winsock are concepts that exist above the transport layer, or at the layer's upper edge, or outside the model completely. While Winsock and other sockets APIs may not perfectly align with the transport layer definition, they build directly upon transport layer capabilities, and operate very closely to this layer. It is for that reason I've depicted Winsock here. </p>		
+										<p>A similar observation can be made of the <strong><small>Windows Filtering Platform components</small></strong>, such as the Base and Kernel Filtering Engines included within the Single System diagram. These components may not be concerned with <em>how</em> interconnectivity is achieved, but they are very much concerned with <em>what</em> is being transmitted via the associated layers, and <em>where</em>. </p>
+										<p>Within the Multi System diagram I've attempted to cover various devices, configurations, and concerns. Again here I have focussed on HTTP driven interconnectivity, and the typical protocols and solutions that support this. As noted within the Single System diagram, there is <strong><small>ambiguity associated with some technology terms</small></strong> such as 'session'. The term 'gateway' is another, and the diagram briefly illustrates two different types of gateway (API and network). It's worth noting that 'router' and 'firewall' can also be confusing terms, given that home routers typically contain an internal firewall and also act as a network gateway (just as a PC or web server may have its own internal firewall). </p>
+										<p>In the article I mention how <strong><small>interaction between the OSI layers is not always linear</small></strong>. This is discussed further within the Multi System diagram and the presentation layer description. Here I point out how encryption is classed as a presentation layer concern, yet for HTTPS, encryption actually occurs after a message is first fragmented by the TLS record protocol, which sits at the lower transport layer (with HTTP over TCP). Some applications are also void of session layer logic.</p>
+										<p><strong><small>The rapid rise of HTTP/3 should be noted.</small></strong> Unlike HTTP versions 1.1 and 2 before it, transport for HTTP version 3 is not based upon the TCP protocol. HTTP/3 replaces TCP with the UDP based QUIC protocol, and this is a fundamental shift for HTTP. While web browsers have been quick to support HTTP/3, the uptake within non-browser based applications will be slower. Newer versions of software development frameworks must be utilised for QUIC protocol support, forcing engineering teams to upgrade and re-test their applications against relevant interconnectivity endpoints.</p>		
+
+										<h3 id="FinalNote">A Final Note</h3>
+                                        <p>This article and the associated diagrams are not a panacea, but hopefully they help bridge the gap between the conceptual, logical, and physical facets of systems interconnectivity.</p>
+										<p>The attached diagrams are free to redistribute, so long as the original authorship details are retained. Where possible, a link back to this blog would also be appreciated. Suggestions and corrections are welcome, and I shall consider these for inclusion in future iterations.</p><p>Thank you for visiting my blog. </p>
+                                    </div>
+                                    <div class="post-navigation">
+                                        <!-- <a href="#" class="post-prev"> -->
+                                            <!-- <div class="post-prev-title"><span>Previous Post</span>None</div> -->
+                                        <!-- </a> -->
+                                        <a href="/articles" class="post-all">
+                                            <i class="icon-grid"> </i>
+                                        </a>
+                                        <!-- <a href="#" class="post-next"> -->
+                                            <!-- <div class="post-next-title"><span>Next Post</span>None</div> -->
+                                        <!-- </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end: Post single item-->
+                        </div>
+                    </div>
+                    <!-- end: content -->
+                    <!-- Sidebar-->
+                    <div class="sidebar sticky-sidebar col-lg-3" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+						<div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: fixed; transform: translateY(120px); width: 245px; left: 840px; top: 0px;"><div class="widget  widget-newsletter">
+							<div class="widget clearfix widget-categories" style="position: static; transform: none; left: 783px; top: 0px;">
+								<h4 class="widget-title">In this article</h4>
+								<ul class="list list-arrow-icons">
+									<li> <a href="#Overview">About this article </a> </li>
+									<li> <a href="#WhatIs">What is the OSI model? </a> </li>
+									<li> <a href="#HowIs">How is it relevant? </a> </li>
+									<li> <a href="#WhyRevisit">Why revisit the model? </a> </li>
+									<li> <a href="#Practical">In practice</a> </li>
+									<li> <a href="#Diagrams">The diagrams </a> </li>
+									<li> <a href="#FinalNote">A final note </a> </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+                    <!-- end: sidebar-->
+                </div>
+            </div>
+        </section>
+        <!-- end: Page Content -->
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="copyright-content">
+                <div class="container">
+                    <div class="copyright-text text-center">© 2023 Nathan Handy. All Rights Reserved. </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end: Footer -->
+    </div>
+    <!-- end: Body Inner -->
+    <!-- Scroll top -->
+    <a id="scrollTop" style="bottom: 16px; opacity: 0; z-index: 199;"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
+    <!--Plugins-->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/plugins.js"></script>
+    <!--Template functions-->
+    <script src="../js/functions.js"></script>
+
+
+</body></html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Nathan Handy's Blog</title>		
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />    
+	<meta name="author" content="Nathan Handy" />    
+	<meta name="description" content="Nathan Handy is blogging about software engineering, solution architecture, and web development.">
+    <link rel="icon" type="image/png" href="images/favicon.ico">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@_H4NDY">
+	<meta name="twitter:creator" content="@_H4NDY">
+	<meta name="twitter:title" content="Nathan Handy's Blog">
+	<meta name="twitter:description" content="Nathan Handy is blogging about software engineering, solution architecture, and web development.">
+	<meta name="twitter:image" content="https://pbs.twimg.com/profile_images/882956325218594820/aPbXAPsP_400x400.jpg">    
+	<meta property="og:title" content="Nathan Handy's Blog">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://www.nathanhandy.blog/">	
+	<meta property="og:description" content="Nathan Handy is blogging about software engineering, solution architecture, and web development.">
+	<meta property="og:image" content="https://pbs.twimg.com/profile_images/882956325218594820/aPbXAPsP_400x400.jpg">
+	
+    <!-- Stylesheets & Fonts -->
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"><!-- LOAD JQUERY LIBRARY -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+    <!-- LOADING FONTS AND ICONS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700%2C600" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="plugins/slider-revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="plugins/slider-revolution/fonts/font-awesome/css/font-awesome.css"> <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css" href="plugins/slider-revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="plugins/slider-revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="plugins/slider-revolution/css/navigation.css">
+    <!-- REVOLUTION JS FILES -->
+    <script type="text/javascript" src="plugins/slider-revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="plugins/slider-revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript">
+        function setREVStartSize(e) {
+            try {
+                var i = jQuery(window).width(),
+                    t = 9999,
+                    r = 0,
+                    n = 0,
+                    l = 0,
+                    f = 0,
+                    s = 0,
+                    h = 0;
+                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) {
+                        f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+                    }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                    var u = (e.c.width(), jQuery(window).height());
+                    if (void 0 != e.fullScreenOffsetContainer) {
+                        var c = e.fullScreenOffsetContainer.split(",");
+                        if (c) jQuery.each(c, function (e, i) {
+                            u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                        }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                    }
+                    f = u
+                } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+                e.c.closest(".rev_slider_wrapper").css({
+                    height: f
+                })
+            } catch (d) {
+                console.log("Failure at Presize of Slider:" + d)
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <!-- Body Inner -->
+    <div class="body-inner">
+        <!-- Header -->
+        <header id="header" data-fullwidth="true" data-transparent="true" class="">
+            <div class="header-inner">
+                <div class="container">
+                    <!--Logo-->
+                    <div id="logo">
+                        <a href="/">
+                            <span class="logo-default">NH</span>
+                            <span class="logo-dark">NH</span>
+                        </a>
+                    </div>
+                    <!--End: Logo-->
+                    <!--Navigation Resposnive Trigger-->
+                    <div id="mainMenu-trigger">
+                        <a class="lines-button x"><span class="lines"></span></a>
+                    </div>
+                    <!--end: Navigation Resposnive Trigger-->
+                    <!--Navigation-->
+                    <div id="mainMenu">
+                        <div class="container">
+                            <nav>
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+									<li><a href="/articles">Articles</a></li>
+									<li><a href="/about">About</a></li>                                              
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--end: Navigation-->
+                </div>
+            </div>
+        </header>
+        <!-- end: Header -->
+        <!-- Revolution Slider -->
+        <section id="slider">
+            <div id="rev_slider_314_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="mountain-parallax-header" data-source="gallery" style="background:rgba(255,255,255,0);padding:0px;">
+                <!-- START REVOLUTION SLIDER 5.4.3.1 fullscreen mode -->
+                <div id="rev_slider_314_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.3.1">
+                    <ul>
+                        <!-- SLIDE  -->
+                        <li data-index="rs-896" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+						<div class="slotholder" style="position: absolute; top: 0px; left: 0px; z-index: 0; width: 100%; height: 100%; backface-visibility: hidden; transform: translate3d(0px, 0px, 0px); visibility: inherit; opacity: 1;"><!--Runtime Modification - Img tag is Still Available for SEO Goals in Source - <img src="https://www.sliderrevolution.com/wp-content/uploads/revslider/mountainscene.jpg" alt="" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Power4.easeOut" data-scalestart="150" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="20" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg defaultimg" data-no-retina="">--><div class="tp-bgimg defaultimg " data-bgcolor="undefined" style="background-repeat: no-repeat; background-image: url(&quot;plugins/slider-revolution/assets/images/mountainscene.jpg&quot;); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit; z-index: 20;" src="plugins/slider-revolution/assets/images/mountainscene.jpg"></div><div class="tp-kbimg-wrap " style="z-index: 2; width: 100%; height: 100%; top: 0px; left: 0px; position: absolute; transform: translate3d(0px, -82.4375px, 0px); transform-origin: 0% 0% 0px; filter: blur(0px);"></div></div>
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption   tp-resizeme  blurslider-gradient rs-parallaxlevel-14" id="slide-896-layer-2" data-x="['center','center','center','center']" data-hoffset="['1','1','1','1']" data-y="['middle','middle','middle','middle']" data-voffset="['-299','-229','-189','-149']" data-fontsize="['150','150','150','80']" data-lineheight="['120','120','120','60']" data-letterspacing="['-10','-10','-10','-5']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":50,"speed":3000,"frame":"0","from":"y:50px;sX:0.3;sY:0.3;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[20,20,20,20]" data-paddingright="[10,10,10,10]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[10,10,10,10]" style="z-index: 5; white-space: nowrap; font-size: 150px; line-height: 120px; font-weight: 700; color: #ffffff; letter-spacing: -10px;font-family:Poppins; background: -webkit-linear-gradient(left, #ff557c 0%,#f3823c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">NATHAN</br>HANDY
+							<!-- <div style="z-index: 5; white-space: nowrap; font-size: 45px; line-height: 50px; font-weight: 700; color: #ffffff; letter-spacing: -2px;font-family:Poppins; background: -webkit-linear-gradient(left, #ff557c 0%,#f3823c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">NATHAN  HANDY</div> -->
+							<!-- <span style="white-space: nowrap; font-size: 70px; line-height: 55px; font-weight: 700; color: #ffffff; letter-spacing: -2px;font-family:Poppins; background: -webkit-linear-gradient(left, #ff557c 0%,#f3823c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"><br/>NATHAN  HANDY</span> -->
+							</div>
+							<!-- <div style="z-index: 5; white-space: nowrap; font-size: 45px; line-height: 50px; font-weight: 700; color: #ffffff; letter-spacing: -2px;font-family:Poppins; background: -webkit-linear-gradient(left, #ff557c 0%,#f3823c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">NATHAN  HANDY</div> -->
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption   tp-resizeme" id="slide-896-layer-1" data-x="['center','center','center','center']" data-hoffset="['-50','-50','-50','-50']" data-y="['middle','middle','middle','middle']" data-voffset="['130','130','130','80']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-responsive_offset="on" data-frames='[{"delay":50,"speed":3000,"frame":"0","from":"sX:0.7;sY:0.7;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;"><img src="plugins/slider-revolution/assets/images/mountainpng-1.png" alt="" data-ww="['1050px','1050px','861','689px']" data-hh="['610px','610px','500px','400px']" width="1050" height="610" data-no-retina> </div>
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-896-layer-10" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']" data-width="full" data-height="200" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":50,"speed":1000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7;background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);"> </div>
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption   tp-resizeme" id="slide-896-layer-4" data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['200','200','200','200']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":300,"speed":2000,"frame":"0","from":"y:100px;sX:1.1;sY:1.1;opacity:0;fb:10px;","to":"o:1;rY:180;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8;">
+                                <div class="rs-looped rs-slideloop" data-easing="Linear.easeNone" data-speed="40" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="plugins/slider-revolution/assets/images/cloud1.png" alt="" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" width="500" height="273" data-no-retina> </div>
+                            </div>
+                            <!-- LAYER NR. 5 -->
+                            <div class="tp-caption   tp-resizeme" id="slide-896-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['200','200','200','200']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":300,"speed":2000,"frame":"0","from":"sX:1.1;sY:1.1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9;">
+                                <div class="rs-looped rs-slideloop" data-easing="Linear.easeNone" data-speed="100" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="plugins/slider-revolution/assets/images/cloud2.png" alt="" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" width="600" height="278" data-no-retina> </div>
+                            </div>
+                            <!-- LAYER NR. 6 -->
+                            <div class="tp-caption   tp-resizeme" id="slide-896-layer-6" data-x="['right','right','right','right']" data-hoffset="['150','150','150','150']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['200','200','200','200']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":300,"speed":2000,"frame":"0","from":"sX:1.1;sY:1.1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10;">
+                                <div class="rs-looped rs-slideloop" data-easing="Linear.easeNone" data-speed="120" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="plugins/slider-revolution/assets/images/cloud3.png" alt="" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" width="738" height="445" data-no-retina> </div>
+                            </div>
+                            <!-- LAYER NR. 7 -->
+                            <div class="tp-caption   tp-resizeme" id="slide-896-layer-11" data-x="['left','left','left','left']" data-hoffset="['-200','-200','-200','-200']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['200','200','200','200']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":300,"speed":2000,"frame":"0","from":"sX:1.1;sY:1.1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 11;">
+                                <div class="rs-looped rs-slideloop" data-easing="Linear.easeNone" data-speed="80" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="plugins/slider-revolution/assets/images/cloud3.png" alt="" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" width="738" height="445" data-no-retina> </div>
+                            </div>
+                            <!-- LAYER NR. 8 -->
+                            <div class="tp-caption   tp-resizeme" id="slide-896-layer-12" data-x="['right','right','right','right']" data-hoffset="['-200','-200','-200','-200']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['200','200','200','200']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":300,"speed":2000,"frame":"0","from":"y:100px;sX:1.1;sY:1.1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 12;">
+                                <div class="rs-looped rs-slideloop" data-easing="Linear.easeNone" data-speed="200" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="plugins/slider-revolution/assets/images/cloud1.png" alt="" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" width="500" height="273" data-no-retina> </div>
+                            </div>
+                            <!-- LAYER NR. 9 -->
+                            <div class="tp-caption rev-btn " id="slide-896-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['100','100','100','150']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":"","speed":"1500","ease":"Power1.easeInOut"}]' data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":500,"speed":1000,"frame":"0","from":"y:50px;sX:1;sY:1;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgba(255,255,255,1);bg:linear-gradient(90deg, rgba(243,130,60,1) 0%, rgba(255,85,124,1) 100%);bs:solid;bw:0 0 0 0;"}]' data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[30,30,30,30]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[30,30,30,30]" style="z-index: 13; white-space: nowrap; font-size: 15px; line-height: 60px; font-weight: 700; color: rgba(255,255,255,1); letter-spacing: px;font-family:Poppins;background:linear-gradient(90deg, rgba(255,85,124,1) 0%, rgba(243,130,60,1) 100%);border-color:rgba(0,0,0,1);-webkit-box-shadow:0px 10px 20px 0px rgba(0,0,0,0.35);-moz-box-shadow:0px 10px 20px 0px rgba(0,0,0,0.35);box-shadow:0px 10px 20px 0px rgba(0,0,0,0.35);cursor:pointer;"><a href="/articles" style='color:white;'>VIEW ARTICLES</a></div>
+                            <!-- LAYER NR. 10 -->
+                            <div class="tp-caption   tp-resizeme" id="slide-896-layer-8" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','30','30','30']" data-width="['none','640','480','360']" data-height="none" data-whitespace="['nowrap','normal','normal','normal']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":600,"speed":1000,"frame":"0","from":"y:50px;rX:90deg;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[10,10,10,10]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[20,20,20,20]" style="z-index: 14; white-space: nowrap; font-size: 15px; line-height: 20px; font-weight: 600; color: #888888; letter-spacing: 10px;font-family:poppins;text-transform:uppercase;">WELCOME TO MY BLOG </div>
+                        </li>
+                    </ul>
+                    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                </div>
+            </div><!-- END REVOLUTION SLIDER -->
+            <script type="text/javascript">
+                var revapi314,
+                    tpj = jQuery;
+                tpj(document).ready(function () {
+                    if (tpj("#rev_slider_314_1").revolution == undefined) {
+                        revslider_showDoubleJqueryError("#rev_slider_314_1");
+                    } else {
+                        revapi314 = tpj("#rev_slider_314_1").show().revolution({
+                            sliderType: "hero",
+                            jsFileLocation: "plugins/slider-revolution/js/",
+                            sliderLayout: "fullscreen",
+                            dottedOverlay: "none",
+                            delay: 9000,
+                            responsiveLevels: [1240, 1024, 778, 480],
+                            visibilityLevels: [1240, 1024, 778, 480],
+                            gridwidth: [1240, 1024, 778, 480],
+                            gridheight: [868, 768, 960, 720],
+                            lazyType: "none",
+                            parallax: {
+                                type: "scroll",
+                                origo: "slidercenter",
+                                speed: 400,
+                                levels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 48, 49, 50, 51, 55],
+                            },
+                            shadow: 0,
+                            spinner: "spinner3",
+                            autoHeight: "off",
+                            fullScreenAutoWidth: "off",
+                            fullScreenAlignForce: "off",
+                            fullScreenOffsetContainer: "",
+                            disableProgressBar: "on",
+                            hideThumbsOnMobile: "off",
+                            hideSliderAtLimit: 0,
+                            hideCaptionAtLimit: 0,
+                            hideAllCaptionAtLilmit: 0,
+                            debugMode: false,
+                            fallbacks: {
+                                simplifyAll: "off",
+                                disableFocusListener: false,
+                            }
+                        });
+                    }
+                    try {
+                        initSocialSharing("314")
+                    } catch (e) {}
+                }); /*ready*/
+            </script>
+        </section>
+        <!-- end: Revolution Slider-->
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="copyright-content">
+                <div class="container">
+                    <div class="copyright-text text-center">© 2023 Nathan Handy. All Rights Reserved. </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end: Footer -->
+    </div>
+    <!-- end: Body Inner -->
+    <!-- Scroll top -->
+    <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
+    <!--Plugins-->
+    <script src="js/plugins.js"></script>
+    <!--Template functions-->
+    <script src="js/functions.js"></script>
+</body>
+
+</html>
