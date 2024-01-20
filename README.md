@@ -11,5 +11,5 @@
                                                                                                                    OOb"                                   Ybmmmd'     
                                                                                                                                                      
                                                                                                     
-This repository is the home for my blog hosted via GitHub pages. This blog is reachable via www.nathanhandy.blog. Thanks for visiting!                                                                                                 
+This repository is the home for my blog hosted via GitHub pages. This blog is reachable via www.nathanhandy.blog. Thanks for visiting!                                                                                                  
                                                                                                     
