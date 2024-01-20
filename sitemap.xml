@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://www.nathanhandy.blog/</loc>
+  <lastmod>2024-01-20T11:52:48+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.nathanhandy.blog/articles/</loc>
+  <lastmod>2024-01-20T11:52:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nathanhandy.blog/about/</loc>
+  <lastmod>2024-01-20T11:52:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nathanhandy.blog/articles/osi-model-revisited.html</loc>
+  <image:image>
+	<image:loc>https://www.nathanhandy.blog/images/blog/OSI%20Model%20in%20Practice%20v1.0%20-%20Disciplines%20-%20Large.png</image:loc>
+  </image:image>
+  <image:image>
+	<image:loc>https://www.nathanhandy.blog/images/blog/OSI%20Model%20in%20Practice%20v1.1%20-%20SingleSystem%20-%20Large.png</image:loc>
+  </image:image>
+  <image:image>
+	<image:loc>https://www.nathanhandy.blog/images/blog/OSI%20Model%20in%20Practice%20v1.0%20-%20MultiSystem%20-%20Large.png</image:loc>
+  </image:image>
+  <lastmod>2024-01-20T11:52:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+</urlset>
